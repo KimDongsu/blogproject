@@ -1,11 +1,11 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-
 from .models import Blog
+#Create
 
 def home(request):
     blogs = Blog.objects
-    return render(request, 'home.html', {'blogs':blogs})
+    return render(request, 'home.html', {'blogs' : blogs})
 
 def detail(request, blog_id):
     blog_detail = get_object_or_404(Blog, pk = blog_id)
